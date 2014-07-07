@@ -21,6 +21,9 @@ class Aoe_FilePicker_Catalog_Product_GalleryController extends Mage_Adminhtml_Ca
 
 				$uploader->setAllowedExtensions(array('jpg','jpeg','gif','png'));
 				$uploader->addValidateCallback('catalog_product_image',
+				//This file seems to be closely mapped to the file that it extends, 
+				// so I was curious why I could not find the  callback function in this file.
+				
 					Mage::helper('catalog/image'), 'validateUploadFile');
 				$uploader->setAllowRenameFiles(true);
 				$uploader->setFilesDispersion(true);
